@@ -1,0 +1,142 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPr6HSFTeUb5MCooVLW3Exe",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/BonaAdamTC/new_repo/blob/main/PTest\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "IzdcKtBEXe8K"
+      },
+      "outputs": [],
+      "source": [
+        "# Dictionary containing Bonaventure's bio info\n",
+        "bio_info = {\n",
+        "    \"name\": \"Bonaventure Attado Tochukwu\",\n",
+        "    \"age\": 30,\n",
+        "    \"skills\": [\"Python\", \"AI\", \"Project Management\", \"Procurement\"]\n",
+        "}"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Loop through the dictionary and print key-value pairs\n",
+        "for key, value in bio_info.items():\n",
+        "    if key == \"skills\":\n",
+        "        print(\"My Skills are:\")\n",
+        "        for skill in value:\n",
+        "            print(skill)\n",
+        "    else:\n",
+        "        print(f\"My {key.capitalize()} is {value}\")"
+      ],
+      "metadata": {
+        "id": "JmEGMlH-YOna",
+        "outputId": "8441b467-4da0-40e2-ccd4-8ec61538cbfa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "My Name is Bonaventure Attado Tochukwu\n",
+            "My Age is 30\n",
+            "My Skills are:\n",
+            "Python\n",
+            "AI\n",
+            "Project Management\n",
+            "Procurement\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Todo list for each day using a list of lists\n",
+        "todos = [\n",
+        "    [\"Pray\", \"Attend class\", \"Study Python\"],         # Monday\n",
+        "    [\"Work on UAV project\", \"Gym\", \"Read Bible\"],      # Tuesday\n",
+        "    [\"Meeting with advisor\", \"Practice Python\"],       # Wednesday\n",
+        "    [\"Call family\", \"Complete assignment\", \"Walk\"],    # Thursday\n",
+        "    [\"Review project work\", \"Play football\"],          # Friday\n",
+        "    [\"Clean apartment\", \"Grocery shopping\"],           # Saturday\n",
+        "    [\"Relax\", \"Plan for the week\", \"Watch movie\"]      # Sunday\n",
+        "]\n",
+        "\n",
+        "# Get todos for a particular day (e.g., Wednesday - Index 2)\n",
+        "print(\"Wednesday's Todos:\", todos[2])\n",
+        "\n",
+        "# Print all todos using iteration\n",
+        "print(\"\\nAll Todos:\")\n",
+        "for i, day_todos in enumerate(todos):\n",
+        "    print(f\"Day {i + 1} Todos: {day_todos}\")"
+      ],
+      "metadata": {
+        "id": "En9rpRDqYZMa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c7b8e0a2-83e8-4948-816b-e3aa00ccff0a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Wednesday's Todos: ['Meeting with advisor', 'Practice Python']\n",
+            "\n",
+            "All Todos:\n",
+            "Day 1 Todos: ['Pray', 'Attend class', 'Study Python']\n",
+            "Day 2 Todos: ['Work on UAV project', 'Gym', 'Read Bible']\n",
+            "Day 3 Todos: ['Meeting with advisor', 'Practice Python']\n",
+            "Day 4 Todos: ['Call family', 'Complete assignment', 'Walk']\n",
+            "Day 5 Todos: ['Review project work', 'Play football']\n",
+            "Day 6 Todos: ['Clean apartment', 'Grocery shopping']\n",
+            "Day 7 Todos: ['Relax', 'Plan for the week', 'Watch movie']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# List comprehension with lambda expression to double each value\n",
+        "doubled_list = [(lambda x: x * 2)(x) for x in range(1, 51)]\n",
+        "print(doubled_list)"
+      ],
+      "metadata": {
+        "id": "VCBM8FvYY-4N"
+      }
+    }
+  ]
+}
